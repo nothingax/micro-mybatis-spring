@@ -66,6 +66,12 @@
 
     <properties>
         <encoding>UTF-8</encoding>
+        <!-- define java compile level-->
+        <compile.version>1.8</compile.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+
         <spring.version>4.3.14.RELEASE</spring.version>
     </properties>
 

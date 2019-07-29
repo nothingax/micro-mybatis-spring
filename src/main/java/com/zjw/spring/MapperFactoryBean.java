@@ -24,6 +24,18 @@ public class MapperFactoryBean<T> implements FactoryBean<T>, InitializingBean {
 
     private Class<T> mapperInterface;
 
+    public MapperFactoryBean() {
+    }
+
+
+    /**
+     * 扫描到mapper 接口，生成bd，会将bd替换为MapperFactoryBean，同时使用该构造方法，将原mapper bd放入
+     *
+     * @param mapperInterface
+     */
+    public MapperFactoryBean(Class<T> mapperInterface) {
+        this.mapperInterface = mapperInterface;
+    }
 
     public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
         this.sqlSessionFactory = sqlSessionFactory;
